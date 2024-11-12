@@ -1,0 +1,114 @@
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extend</title>
+    <link rel="stylesheet" href="../css/extend.css">
+    <link rel="stylesheet" href="../css/module_base.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>EXTEND BOOKING</h1>
+            <div class="item-selected">
+                <img src="../../media/item.png" alt="" id="itemImage">
+                <div class="item-information">
+                    <h2 id="itemName"></h2>
+                    <div class="item-date-modifier">
+                        <!-- old date -->
+                        <label for="oldDate">Old Date:</label>
+                        <input type="date" id="oldDate" name="oldDate" readonly>
+                        <!-- date starting -->
+                        <label for="dateStart">New Date:</label>
+                        <input type="date" id="dateStart" name="dateStart" onchange="calculateCost()">
+                        <!-- date ending -->
+                        <label for="dateEnd">End Date:</label>
+                        <input type="date" id="dateEnd" name="dateEnd" onchange="calculateCost()">
+                    </div>
+                    <p id="itemCost"></p>
+                    <p id="totalCost"></p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button" id="extendButton">Extend</button>
+                <button class="button" onclick="window.history.back()">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/extend.js"></script>
+</body>
+</html> */
+
+.item-selected {
+    display: flex;
+    /* justify-content: row; */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.item-selected img {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.item-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item-information h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.item-date-modifier {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-date-modifier label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-date-modifier input {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* dark button */
+.button {
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}

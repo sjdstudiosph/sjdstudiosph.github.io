@@ -1,1 +1,1 @@
-# sjdstudiosph.github.io
+https://sjdstudiosph.github.io/
