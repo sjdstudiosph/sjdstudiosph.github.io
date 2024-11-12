@@ -1,0 +1,90 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    /* transparent background with abit of grayscale */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#websiteName {
+    /* font-size: 30px; */
+    font-weight: bold;
+    margin-right: auto;
+}
+
+#websiteName a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+#searchInput {
+    padding: 20px 100px;
+    border: none;
+    border-radius: 50px;
+}
+
+#searchButton {
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#bookNowButton {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#indexText {
+    font-size: 80px;
+    font-weight: bold;
+}
+
