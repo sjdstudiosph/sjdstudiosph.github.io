@@ -53,26 +53,19 @@ const defaultCartItems = [
     }
 ];
 
-// Function to load or initialize cart items in local storage
 function loadCartItems() {
-    // Check if cart items are already in local storage
     const storedCartItems = localStorage.getItem('cartItems');
     
     if (storedCartItems) {
-        // If found in local storage, parse and use it
         return JSON.parse(storedCartItems);
     } else {
-        // If not found, use the default data and save it to local storage
         localStorage.setItem('cartItems', JSON.stringify(defaultCartItems));
         return defaultCartItems;
     }
 }
 
-// Load cart items initially
 let cartItems = loadCartItems();
 
-// Utility functions as before
-// Updated calculateDaysLeft function to calculate days left from today's date
 function calculateDaysLeft(endsIn) {
     const endDate = new Date(endsIn);
     const currentDate = new Date(); // Use today's date
@@ -80,7 +73,6 @@ function calculateDaysLeft(endsIn) {
     return Math.floor(timeDifference / (1000 * 60 * 60 * 24)) + 1; // Add 1 to include the end date
 }
 
-// Updated setStatusAndDaysLeft function to handle expiration status correctly
 function setStatusAndDaysLeft(cartItems) {
     cartItems.forEach(item => {
         const daysLeft = calculateDaysLeft(item.endsIn);
@@ -229,7 +221,6 @@ function generateCartItems(cartItems) {
     });
 }
 
-// Initialize and generate cart items on page load
 document.addEventListener("DOMContentLoaded", () => {
     generateCartItems(cartItems);
 });
