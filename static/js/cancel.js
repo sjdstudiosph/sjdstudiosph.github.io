@@ -4,6 +4,7 @@ const selectedItem = JSON.parse(localStorage.getItem("selectedItem"));
 function cancelButtonListener() {
     let cancelButton = document.getElementById("cancelButton");
     cancelButton.addEventListener("click", () => {
+        
         // delete item from cart
         const updatedCartItems = cartItems.filter((item) => item.refNo !== selectedItem.refNo);
         localStorage.setItem('cartItems', JSON.stringify(updatedCartItems));
