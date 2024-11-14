@@ -1,57 +1,73 @@
-// Default cartItems data
-const defaultCartItems = [
-    {
-        name: "Basic Sound Package",
-        category: "Audio Equipment",
-        price: 800,
-        totalCost: 0,
-        stock: 5,
-        imageSrc: "../../media/sjd/Basic_Sound_Package.png",
-        startsIn: "2024-11-11",
-        endsIn: "2024-11-15",
-        refNo: "012847"
-    },
-    {
-        name: "Stage Lighting Essentials",
-        category: "Lighting Equipment",
-        price: 950,
-        stock: 4,
-        imageSrc: "../../media/sjd/Stage_Lighting_Essentials.png",
-        startsIn: "2024-11-11",
-        endsIn: "2024-11-28",
-        refNo: "024186"
-    },
-    {
-        name: "Deluxe Lighting Package",
-        category: "Lighting Equipment",
-        price: 1200,
-        stock: 3,
-        imageSrc: "../../media/sjd/Deluxe_Lighting_Package.png",
-        startsIn: "2024-11-11",
-        endsIn: "2024-11-13",
-        refNo: "039842"
-    },
-    {
-        name: "Premium DJ Set",
-        category: "Audio Equipment",
-        price: 2000,
-        stock: 1,
-        imageSrc: "../../media/sjd/Premium_DJ_Set.png",
-        startsIn: "2024-11-08",
-        endsIn: "2024-11-10",
-        refNo: "037198"
-    },
-    {
-        name: "Pro Audio Setup",
-        category: "Audio Equipment",
-        price: 1500,
-        stock: 2,
-        imageSrc: "../../media/sjd/Pro_Audio_Setup.png",
-        startsIn: "2024-11-09",
-        endsIn: "2024-11-11",
-        refNo: "017263"
-    }
-];
+// function generateGridItems(numberOfItems, products) {
+//     const gridContainer = document.querySelector('.grid-container');
+//     gridContainer.innerHTML = '';
+
+//     for (let i = 0; i < numberOfItems; i++) {
+//         const gridItem = document.createElement('div');
+//         gridItem.classList.add('grid-item');
+
+//         const inputId = `numberInput-${i}`;
+//         const buttonId = `addToCartButton-${i}`;
+
+//         gridItem.innerHTML = `
+//             <img src="${products[i].imageSrc}" alt="Product image" class="itemImage">
+//             <div class="item-info">
+//                 <h3 class="itemName" title="${products[i].name}">${products[i].name}</h3>
+//                 <div class="item-pricing-box">
+//                     <h2 class="itemPrice">PHP ${products[i].price}</h2>
+//                     <!-- <p class="inStocks">In stocks: ${products[i].stock}</p> -->
+//                     <p>Ref: ${products[i].refNo}</p>
+//                 </div>
+//                 <button class="addToCartButton" id="${buttonId}">Add</button>
+//             </div>
+//         `;
+//         gridContainer.appendChild(gridItem);
+        
+//         document.getElementById(buttonId).addEventListener('click', () => {
+//             const quantity = parseInt(document.getElementById(inputId).value, 10);
+//             if (quantity > 0) {
+//                 addToCart({
+//                     inputId: inputId,
+//                     buttonId: buttonId,
+//                     name: products[i].name,
+//                     price: products[i].price,
+//                     quantity: quantity,
+//                     subtotal: products[i].price * quantity,
+//                     stock: products[i].stock,
+//                     imageSrc: products[i].imageSrc,
+//                     referenceNumber: products[i].refNo
+//                 });
+//             } else {
+//                 document.getElementById(inputId).style.border = '1px solid red';
+//                 setTimeout(() => document.getElementById(inputId).style.border = '1px solid #ccc', 2000);
+//             }
+//         });
+//     }
+// }
+
+// function addToCart(item) {
+//     const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+//     const cartItem = cart.find(cartItem => cartItem.name === item.name);
+//     if (cartItem) {
+//         cartItem.quantity += item.quantity;
+//         cartItem.subtotal += item.subtotal;
+//     } else {
+//         cart.push({
+//             name: item.name,
+//             price: item.price,
+//             quantity: item.quantity,
+//             subtotal: item.subtotal,
+//             stock: item.stock,
+//             imageSrc: item.imageSrc,
+//             referenceNumber: item.referenceNumber
+//         });
+//     }
+//     localStorage.setItem('cartItems', JSON.stringify(cart));
+// }
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     generateGridItems(defaultCartItems.length, defaultCartItems);
+// });
 
 function loadCartItems() {
     const storedCartItems = localStorage.getItem('cartItems');

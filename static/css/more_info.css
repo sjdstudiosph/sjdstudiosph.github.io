@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/* <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,9 +28,7 @@
     <div class="container">
         <div class="content">
             <div class="desc">
-                <div class="img">
-                    <img src="" alt="" id="productImage">
-                </div>
+                <img src="" alt="" id="productImage">
                 <h1 id="productName"></h1>
                 <p id="productDesc"></p>
                 <p id="productPrice"></p>
@@ -41,4 +39,39 @@
 
     <script src="../js/more_info.js"></script>
 </body>
-</html>
+</html> */
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#addToCart {
+    margin: 5px 0;
+}
+
+#productPrice {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#productImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
